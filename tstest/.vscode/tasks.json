@@ -1,0 +1,47 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Create Python venv",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "-m",
+                "venv",
+                ".venv"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "Install requirements",
+            "type": "shell",
+            "command": ".venv\\Scripts\\python.exe",
+            "args": [
+                "-m",
+                "pip",
+                "install",
+                "-r",
+                "requirements.txt"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "silent"
+            }
+        },
+        {
+            "label": "Run Python file",
+            "type": "shell",
+            "command": ".venv\\Scripts\\python.exe",
+            "args": [
+                "${file}"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always"
+            }
+        }
+    ]
+}
